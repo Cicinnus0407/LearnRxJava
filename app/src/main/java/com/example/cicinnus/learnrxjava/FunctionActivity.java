@@ -239,8 +239,5 @@ public class FunctionActivity extends AppCompatActivity {
 
             }
         });
-        if (currentNum == 5 && subscription != null && subscription.isUnsubscribed()) {
-            subscription.unsubscribe();
-        }
     }
 }
