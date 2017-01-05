@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+             <Button                 style="@style/normalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="map"
+                android:text="map sample1" />
+
+             <Button                 style="@style/normalBtn"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="map2"
+                android:text="map sample2" />
+
+            <LinearLayout
+                android:id="@+id/ll_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                 <Button                 style="@style/normalBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="map3"
+                    android:text="map sample3" />
+
+
+            </LinearLayout>
+
+             <Button                 style="@style/normalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="flatmap"
+                android:text="flatmap" />
+
+             <Button                 style="@style/normalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="concatMap"
+                android:text="concatMap" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="switchMap"
+                android:text="switchMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+             <Button                 style="@style/normalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="groupBY"
+                android:text="groupBy" />
+
+             <Button                 style="@style/normalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="scan"
+                android:text="scan" />
+
+             <Button                 style="@style/normalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="buffer"
+                android:text="buffer" />
+
+             <Button                 style="@style/normalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="window"
+                android:text="window" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+</LinearLayout>

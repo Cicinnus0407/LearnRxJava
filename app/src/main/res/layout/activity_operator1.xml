@@ -15,36 +15,42 @@
             android:orientation="vertical">
 
             <Button
+                style="@style/normalBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="create"
                 android:text="create" />
 
             <Button
+                style="@style/normalBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="from"
                 android:text="from" />
 
             <Button
+                style="@style/normalBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="just"
-                android:text="just SAMPLE1" />
+                android:text="just sample1" />
 
             <Button
+                style="@style/normalBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="just2"
-                android:text="just SAMPLE2" />
+                android:text="just sample2" />
 
             <Button
+                style="@style/normalBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="range"
                 android:text="range" />
 
             <Button
+                style="@style/normalBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="timer"
@@ -55,12 +61,14 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    style="@style/normalBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="interval"
                     android:text="interval" />
 
                 <Button
+                    style="@style/normalBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="stopInterval"
@@ -68,60 +76,18 @@
             </LinearLayout>
 
             <Button
+                style="@style/normalBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="repeat"
                 android:text="repeat" />
 
             <Button
+                style="@style/normalBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="defer"
                 android:text="defer" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="map"
-                android:text="map sample1" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="map2"
-                android:text="map sample2" />
-
-            <LinearLayout
-                android:id="@+id/ll_map"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="map3"
-                    android:text="map sample3" />
-
-
-            </LinearLayout>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="flatmap"
-                android:text="flatmap" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="concatMap"
-                android:text="concatMap" />
-
-            <Button
-                android:onClick="switchMap"
-                android:text="switchMap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
 
 
         </LinearLayout>

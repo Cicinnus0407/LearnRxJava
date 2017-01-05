@@ -16,7 +16,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".FunctionActivity"/>
+        <activity android:name=".OperatorActivity1"/>
+        <activity android:name=".OperatorActivity2" />
+        <activity android:name=".OperatorActivity3" />
+        <activity android:name=".OperatorActivity4" />
     </application>
 
 </manifest>

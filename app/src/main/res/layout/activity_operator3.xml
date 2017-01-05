@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="filter"
+                android:text="filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="ofType"
+                android:text="ofType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="first"
+                android:text="first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="firstOrDefault"
+                android:text="firstOrDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+             <Button                 style="@style/normalBtn"
+                android:onClick="takeFirst"
+                android:text="takeFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="single"
+                android:text="single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="last"
+                android:text="last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="skip"
+                android:text="skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="skipLast"
+                android:text="skipLast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="take"
+                android:text="take"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="debounce"
+                android:text="debounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="distinct"
+                android:text="distinct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:text="elementAt"
+                android:onClick="elementAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+             <Button                 style="@style/normalBtn"
+                android:onClick="ignoreElement"
+                android:text="ignoreElement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+    <View
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/tv_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+</LinearLayout>
