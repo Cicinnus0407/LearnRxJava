@@ -14,62 +14,55 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <Button
+                android:onClick="delay"
                 style="@style/normalBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="merge"
-                android:text="merge" />
-
-            <Button
-                style="@style/normalBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="mergeDelayError"
-                android:text="mergeDelayError" />
-
-            <Button
-                style="@style/normalBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="concat"
-                android:text="concat" />
-
-            <Button
-                style="@style/normalBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="zip"
-                android:text="zip" />
-
-            <Button
-                style="@style/normalBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="startWith"
-                android:text="startWith" />
-
-            <Button
-                style="@style/normalBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="combineLatest"
-                android:text="combineLatest" />
-
-            <Button
-                style="@style/normalBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="join"
-                android:text="join" />
-
-            <Button
-                android:onClick="switchOnNext"
-                style="@style/normalBtn"
-                android:text="switchOnNext"
+                android:text="delay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
+            <Button
+                android:onClick="delaySubscription"
+                android:text="delaySubscription"
+                style="@style/normalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                style="@style/normalBtn"
+                android:text="do"
+                android:onClick="Do"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_subscribe"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:onClick="subscribeOn"
+                    android:text="subscribeOn--ObserverOn"
+                    style="@style/normalBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                style="@style/normalBtn"
+                android:onClick="timeInterval"
+                android:text="timeInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                style="@style/normalBtn"
+                android:onClick="timestamp"
+                android:text="timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
 
         </LinearLayout>
 
@@ -87,7 +80,7 @@
 
         <TextView
             android:id="@+id/tv_log"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </ScrollView>

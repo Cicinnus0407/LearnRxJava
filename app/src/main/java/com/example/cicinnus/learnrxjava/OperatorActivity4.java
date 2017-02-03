@@ -3,6 +3,7 @@ package com.example.cicinnus.learnrxjava;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -252,10 +253,11 @@ public class OperatorActivity4 extends AppCompatActivity {
 
     /**
      * 在另一个Observable发射的数据定义的时间窗口内，这个Observable发射了一条数据，就结合两个Observable发射的数据
+     *
      * @param view
      */
     public void join(View view) {
-        tv_log.setText("结合两个Observer的数据");
+        tv_log.setText("结合两个Observer的数据\n");
         Observable<Integer> observableA = Observable.range(1, 2).subscribeOn(Schedulers.newThread());
         Observable<Integer> observableB = Observable.range(7, 3).subscribeOn(Schedulers.newThread());
         observableA.join(observableB, new Func1<Integer, Observable<Integer>>() {
@@ -268,12 +270,12 @@ public class OperatorActivity4 extends AppCompatActivity {
             @Override
             public Observable<Integer> call(Integer integer) {
 
-                return Observable.just(integer).delay(1,TimeUnit.SECONDS);
+                return Observable.just(integer).delay(1, TimeUnit.SECONDS);
             }
         }, new Func2<Integer, Integer, Integer>() {
             @Override
             public Integer call(Integer integer, Integer integer2) {
-                return integer+integer2;
+                return integer + integer2;
             }
         }).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<Integer>() {
@@ -294,5 +296,50 @@ public class OperatorActivity4 extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    /**
+     * 将一个发射多个Observables的Observable转换成另一个单独的Observable
+     *
+     * @param view
+     */
+    public void switchOnNext(View view) {
+        final String TAG = "switchOnNext";
+        tv_log.setText("发射多个Observables的Observable转换成另一个单独的Observable，具体输出看log\n");
+        Observable<Observable<Long>> observable = Observable
+                .interval(0, 500, TimeUnit.MILLISECONDS)
+                .map(new Func1<Long, Observable<Long>>() {
+                    @Override
+                    public Observable<Long> call(Long aLong) {
+                        //每隔200毫秒产生一组数据（0,10,20,30,40)
+                        Log.d(TAG, "call1: "+aLong );
+//                        tv_log.append("call:1 " + aLong + "\n");
+
+                        return Observable.interval(0, 200, TimeUnit.MILLISECONDS).map(new Func1<Long, Long>() {
+                            @Override
+                            public Long call(Long aLong) {
+                                Log.d(TAG, "call2: "+aLong );
+//                                tv_log.append("call:2 " + aLong + "\n");
+                                return aLong * 10;
+                            }
+                        }).take(5);
+                    }
+                }).take(2);
+        Observable.switchOnNext(observable).subscribe(new Subscriber<Long>() {
+            @Override
+            public void onCompleted() {
+                Log.d(TAG, "onCompleted: SwitchOnNext" );
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.e(TAG, "onError: SwitchOnNext");
+            }
+
+            @Override
+            public void onNext(Long aLong) {
+                Log.d(TAG, "onNext: SwitchOnNext  "+aLong);
+            }
+        });
     }
 }

@@ -29,4 +29,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this,OperatorActivity4.class));
 
     }
+
+    public void operator5(View view) {
+        startActivity(new Intent(MainActivity.this,OperatorActivity5.class));
+    }
 }
